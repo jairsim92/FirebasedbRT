@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div style="color: blue;">
+    <h1>{{title}}</h1>
+    <h3>{{description}}</h3>
+  </div>
+
+  <div style="width: 300px;">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="item">Mensaje a almacenar</label>
+        <input type="text" class="form-control" placeholder="Ingrese Contenido"
+          id="item" required [(ngModel)]="itemValue" name="item">
+      </div>
+
+      <div class="btn-group">
+        <button type="submit" class="btn btn-success">Enviar</button>
+      </div>
+    </form>
+  </div>
+
+  <h2>Elementos almacenados en Firebase</h2>
+  <div class="col-md-3">
+    <pre *ngFor="let item of items | async">{{item.content}}</pre>
+  </div>
+</div>
+
+<nav>
+  <a routerLink="clentes" class="btn btn-primary active" role="button"></a>
+</nav>
+
+ <!-- <router-outlet></router-outlet> -->
+
+
+   <!-- <nav>
+  <a routerLink="customers" class="btn btn-primary active" role="button"></a>
+</nav>
+<router-outlet></router-outlet> -->

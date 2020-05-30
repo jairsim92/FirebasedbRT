@@ -1,0 +1,48 @@
+enviroment.ts: configurar la información para conectar con firebase
+customer.ts: Define el modelo de datos customer
+customer.service.ts: define CustomerService, que usa @angular.fire
+		     para interactuar con firebase
+creacion de 3 componentes
+createcustomer: crear un nuevo item
+customerdetails: mostrar detalles de los items
+customerlist: contiene la lista de los items, este es el componentes
+              padre de customerdetails
+app-routing.module.ts Define la rutas de los componentes
+app.module.ts Declaracion (importar) librerias necesarias del ambiente
+              modulos
+
+
+paso a paso
+
+configurar el firebaseproject e instalar @ angular/fire
+adicionar firebase configurar variables enviroment
+Abrir /src/enviroment/enviroment.ts,
+
+Agregue su configuración de Firebase SDK que se genero al momento de
+configurar firebase en la web, guardando la inf de la ventana emergente.
+
+enviroment acuerdece
+
+
+Creacion de Servicio y componentes
+ng g c createcustomers/customer
+ng g c createcustomers/createcustomer
+ng g c createcustomers/customerdetails
+ng g c createcustomers/customerlist
+
+import -> app.module.ts (imagen)
+
+crear modelo de customer.ts
+la llave del campo es importante para actualizar el item
+
+crear el servicio customer.service.ts
+
+crear el contenido del componente customerdetails
+
+crear el contenido del componente customerlist
+en el codigo a cerca, se usa snaphotChanges() with RXJS map()
+operador para obtener la key (firebase id) de cada item
+
+customerlist.html
+se pasa casa dato del item customer a el componente
+customerdetails
