@@ -13,12 +13,12 @@
       </div>
 
       <div class="btn-group">
-        <button type="submit" class="btn btn-success">Enviar</button>
+        <button type="submit" class="btn btn-success">Enviar datos a web</button>
       </div>
     </form>
   </div>
 
-  <h2>Elementos almacenados en Firebase</h2>
+  <h2>Elementos almacenados en Firebase Database Real Time</h2>
   <div class="col-md-3">
     <pre *ngFor="let item of items | async">{{item.content}}</pre>
   </div>
