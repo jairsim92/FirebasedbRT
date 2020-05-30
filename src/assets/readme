@@ -44,5 +44,5 @@ en el codigo a cerca, se usa snaphotChanges() with RXJS map()
 operador para obtener la key (firebase id) de cada item
 
 customerlist.html
-se pasa casa dato del item customer a el componente
+se pasa cada dato del item customer a el componente
 customerdetails
